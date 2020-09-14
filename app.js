@@ -6,16 +6,18 @@ function alphabetize(word) {
 
 function getAnagramsOf(text) {
   let comparison = alphabetize(text);
-    let anagramsArray = []
-  if (word of words.js == comparison.length) {
-      let compared = alphabetize(word)
-      if (compared == comparison) {
-        anagramsArray.push(words.js[word])
+  let anagramsArray = [];
+  for (let currentWord = 0; currentWord < words.length; currentWord++) {
+    let compared = alphabetize(words[currentWord]);
+    if (compared == comparison) {
+      anagramsArray.push(words[currentWord]);
     }
   }
-  let displayAnagrams = document.createElement("div")
-  displayAnagrams.innerText = JSON.stringify(anagramsArray)
+  let displayAnagrams = document.createElement("div");
+  displayAnagrams.innerText = anagramsArray;
   document.body.appendChild(displayAnagrams);
+
+  event.preventDefault();
 }
 
 const button = document.getElementById("findButton");
