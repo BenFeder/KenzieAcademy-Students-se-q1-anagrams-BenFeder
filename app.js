@@ -14,7 +14,7 @@ function getAnagramsOf(text) {
     }
   }
   let displayAnagrams = document.createElement("div");
-  displayAnagrams.innerText = anagramsArray;
+  displayAnagrams.innerText = text + ": " + anagramsArray.join(" ");
   document.body.appendChild(displayAnagrams);
 
   event.preventDefault();
